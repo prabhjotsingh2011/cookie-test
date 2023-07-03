@@ -15,6 +15,10 @@ app.get('/fetch-cookie', (req, res) => {
   const myCookie = req.cookies.myCookie;
   res.send(`Cookie value: ${myCookie}`);
 });
+app.get('/', (req, res) => {
+    res.send(`up and running`);
+  });
+  
 
 app.listen(process.env.PORT || 4000, () => {
   console.log('Server listening on port 4000');
